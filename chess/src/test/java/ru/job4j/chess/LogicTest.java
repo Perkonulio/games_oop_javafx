@@ -15,4 +15,12 @@ public class LogicTest {
         logic.add(new BishopBlack(Cell.C1));
         logic.move(Cell.C1, Cell.H6);
     }
+
+    @Test
+    public void free() {
+        Cell[] steps = new Cell[] {Cell.C5, Cell.D4, Cell.F5};
+        Logic logic = new Logic();
+        logic.add(new BishopBlack(Cell.C1));
+
+    }
 }
