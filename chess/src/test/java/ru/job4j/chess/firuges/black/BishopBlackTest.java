@@ -2,6 +2,7 @@ package ru.job4j.chess.firuges.black;
 
 import junit.framework.TestCase;
 import org.junit.Test;
+import ru.job4j.chess.ImpossibleMoveException;
 import ru.job4j.chess.firuges.Cell;
 import ru.job4j.chess.firuges.Figure;
 
@@ -27,14 +28,14 @@ public class BishopBlackTest {
     }
 
     @Test
-    public void testWay() {
+    public void testWay() throws ImpossibleMoveException {
         BishopBlack bishopBlack = new BishopBlack(Cell.E3);
         Cell[] maybeWay = bishopBlack.way(Cell.B6);
         assertThat(maybeWay, is(new Cell[] {Cell.D4, Cell.C5, Cell.B6}));
     }
 
     @Test
-    public void testWay2() {
+    public void testWay2() throws ImpossibleMoveException{
         BishopBlack bishopBlack = new BishopBlack(Cell.C1);
         Cell[] maybeWay = bishopBlack.way(Cell.G5);
         assertThat(maybeWay, is(new Cell[] {Cell.D2, Cell.E3, Cell.F4, Cell.G5}));
